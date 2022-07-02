@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Card from "./Card";
-import { TypeState } from "../../types/types";
+import { TypeState, TypeStatus } from "../../types/types";
 
 type Props = {
-  selectedStatus: string;
-  setSelectedStatus: (s: string) => void;
+  selectedStatus: TypeStatus;
+  setSelectedStatus: (s: TypeStatus) => void;
 };
 
 const url = "https://call-center-yalitech.herokuapp.com/orders/stats";
@@ -33,12 +33,14 @@ export default React.memo(function Cards({
     getStatus();
   }, []);
   return (
-    <div className="px-2 py-10 flex items-center space-x-2">
+    <div className="flex items-center space-x-2 px-2 py-10">
       {Object.entries(Status).map((state, index) => (
         <Card
           key={index}
           clickHandler={() => {
-            setSelectedStatus(state[0]);
+            selectedStatus === state[0]
+              ? setSelectedStatus("")
+              : setSelectedStatus(state[0] as TypeStatus);
           }}
           title={state[0]}
           amount={state[1]}

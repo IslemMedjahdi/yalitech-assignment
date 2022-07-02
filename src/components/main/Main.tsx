@@ -5,17 +5,17 @@ import TableHead from "./TableHead";
 
 type Props = {
   orders: TypeOrder[];
+  loading: boolean;
 };
 
-export default function Main({ orders }: Props) {
-  console.log(orders);
+export default function Main({ orders, loading }: Props) {
   return (
-    <div className="py-4 h-[60vh]">
+    <div className="mt-10 h-[60vh]  overflow-auto scrollbar-hide">
       {/*  */}
-      {/* <table>
+      <table className="table w-full table-fixed border-separate border-spacing-y-2">
         <TableHead />
-        <TableBody />
-      </table> */}
+        <TableBody orders={orders} loading={loading} />
+      </table>
     </div>
   );
 }

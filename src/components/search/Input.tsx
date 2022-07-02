@@ -21,22 +21,22 @@ export default function Input({
   return (
     <form
       onSubmit={onSubmit}
-      className="grow flex bg-white py-2 px-4 rounded-3xl items-center space-x-2"
+      className="flex grow items-center space-x-2 rounded-3xl bg-white py-2 px-4"
     >
       <input
         onChange={onChange}
         placeholder="Search"
         value={searchValue}
-        className="grow outline-none bg-transparent placeholder:text-slate-400 text-gray-900"
+        className="grow bg-transparent text-gray-900 outline-none placeholder:text-slate-400"
       />
       {searchValue && (
         <IoCloseOutline
           onClick={deleteSearchValue}
-          className="text-slate-400 text-2xl cursor-pointer"
+          className="cursor-pointer text-2xl text-slate-400"
         />
       )}
       <button type="submit">
-        <AiOutlineSearch className="text-slate-400 text-2xl" />
+        <AiOutlineSearch className="text-2xl text-slate-400" />
       </button>
     </form>
   );

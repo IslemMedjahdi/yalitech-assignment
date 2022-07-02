@@ -30,14 +30,14 @@ export default function Pagination({
   }, [selectedPage, pages]);
 
   return (
-    <div className="flex items-center space-x-2 justify-center py-10">
+    <div className="flex items-center justify-center space-x-2 py-10">
       <button
         onClick={() =>
           setSelectedPage(selectedPage > 1 ? selectedPage - 1 : selectedPage)
         }
-        className="w-11 rounded-full bg-slate-100 h-11 flex items-center justify-center"
+        className="flex h-11 w-11 items-center justify-center rounded-full bg-slate-100"
       >
-        <FaChevronLeft />
+        <FaChevronLeft className="text-slate-600" />
       </button>
       {paginationBar.map((item) => (
         <Button
@@ -53,16 +53,16 @@ export default function Pagination({
             selectedPage < pages ? selectedPage + 1 : selectedPage
           )
         }
-        className="w-11 rounded-full bg-slate-100 h-11 flex items-center justify-center"
+        className="flex h-11 w-11 items-center justify-center rounded-full bg-slate-100"
       >
-        <FaChevronRight />
+        <FaChevronRight className="text-slate-600" />
       </button>
       <select
         value={selectedPage}
         onChange={(e) => {
           setSelectedPage(parseInt(e.target.value));
         }}
-        className="outline-none bg-slate-100 h-11 w-11 rounded-full flex items-center justify-center cursor-pointer"
+        className="flex h-11 w-11 cursor-pointer items-center justify-center rounded-full bg-slate-100 outline-none"
       >
         {Array.from(Array(pages).keys()).map((item) => (
           <option key={item} value={item + 1}>

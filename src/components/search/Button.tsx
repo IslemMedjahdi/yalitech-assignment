@@ -16,9 +16,9 @@ export default function Button({
   return (
     <button
       onClick={onClick}
-      className={`${extraStyle} ${
-        isSelected ? "bg-red-700 bg-opacity-80 text-white" : ""
-      } py-2 flex items-center space-x-1 px-2 hover:bg-opacity-80 transition shadow-md bg-white rounded-md font-medium text-sm font-main`}
+      className={` ${
+        isSelected ? "bg-red-500 bg-opacity-80 text-white" : ""
+      } ${extraStyle} flex items-center space-x-1 rounded-md bg-white py-2 px-2 font-main text-sm font-medium shadow-md transition hover:bg-opacity-80`}
     >
       <span>{children}</span>
       {isSelected && <BsCheckLg />}

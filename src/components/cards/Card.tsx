@@ -18,10 +18,10 @@ export default function Card({
       onClick={clickHandler}
       className={`${
         isSelected ? "bg-slate-300" : "bg-slate-100 hover:bg-slate-200"
-      } cursor-pointer shadow-md transition duration-300 rounded-md p-3 min-w-[15rem]`}
+      } min-w-[15rem] cursor-pointer rounded-md p-3 shadow-md transition duration-300`}
     >
-      <p className="px-2 text-indigo-800 font-semibold text-sm">{title}</p>
-      <p className="font-bold text-xl text-indigo-800">{amount}</p>
+      <p className="px-2 text-sm font-semibold text-indigo-800">{title}</p>
+      <p className="text-xl font-bold text-indigo-800">{amount}</p>
     </div>
   );
 }

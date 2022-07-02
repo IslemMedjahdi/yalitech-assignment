@@ -9,5 +9,5 @@ module.exports = {
       fontFamily: { main: ["'Poppins'", "sans-serif"] },
     },
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar-hide")],
 };
