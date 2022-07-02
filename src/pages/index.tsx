@@ -69,6 +69,7 @@ const Home: NextPage = () => {
       </Head>
       <Header />
       <Cards
+        setSelectedPage={setSelectedPage}
         selectedStatus={selectedStatus}
         setSelectedStatus={setSelectedStatus}
       />

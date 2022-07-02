@@ -6,6 +6,7 @@ import { TypeState, TypeStatus } from "../../types/types";
 type Props = {
   selectedStatus: TypeStatus;
   setSelectedStatus: (s: TypeStatus) => void;
+  setSelectedPage: (n: number) => void;
 };
 
 const url = "https://call-center-yalitech.herokuapp.com/orders/stats";
@@ -13,6 +14,7 @@ const url = "https://call-center-yalitech.herokuapp.com/orders/stats";
 export default React.memo(function Cards({
   selectedStatus,
   setSelectedStatus,
+  setSelectedPage,
 }: Props) {
   const [Status, setStatus] = useState<TypeState>({
     pending: 0,
@@ -41,6 +43,7 @@ export default React.memo(function Cards({
             selectedStatus === state[0]
               ? setSelectedStatus("")
               : setSelectedStatus(state[0] as TypeStatus);
+            setSelectedPage(1);
           }}
           title={state[0]}
           amount={state[1]}

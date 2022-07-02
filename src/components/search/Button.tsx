@@ -2,14 +2,12 @@ import React from "react";
 import { BsCheckLg } from "react-icons/bs";
 type Props = {
   children: React.ReactNode;
-  extraStyle?: string;
   onClick: () => void;
   isSelected?: boolean;
 };
 
 export default function Button({
   children,
-  extraStyle = "",
   onClick,
   isSelected = false,
 }: Props) {
@@ -17,8 +15,8 @@ export default function Button({
     <button
       onClick={onClick}
       className={` ${
-        isSelected ? "bg-red-500 bg-opacity-80 text-white" : ""
-      } ${extraStyle} flex items-center space-x-1 rounded-md bg-white py-2 px-2 font-main text-sm font-medium shadow-md transition hover:bg-opacity-80`}
+        isSelected ? "bg-red-500 bg-opacity-80 text-white" : "bg-white"
+      }  flex items-center space-x-1 rounded-md py-2 px-2 font-main text-sm font-medium shadow-md transition hover:bg-opacity-80`}
     >
       <span>{children}</span>
       {isSelected && <BsCheckLg />}

@@ -54,9 +54,12 @@ export default function Search({
           {item.title}
         </Button>
       ))}
-      <Button onClick={clearHandler} extraStyle="bg-red-800 text-white">
+      <button
+        onClick={clearHandler}
+        className={`flex items-center  space-x-1 rounded-md bg-red-800 py-2 px-2 font-main text-sm font-medium text-white shadow-md transition hover:bg-opacity-80`}
+      >
         Clear
-      </Button>
+      </button>
       <Input
         onSubmit={onSubmit}
         searchValue={searchValue}
