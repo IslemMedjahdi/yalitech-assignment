@@ -7,6 +7,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 **[Call center](https://frontend-test-yalitech.vercel.app/)**
 <br>
 <br>
+<img src="https://i.ibb.co/R9GM63F/Screenshot-63.png" alt="Screenshot-63" border="0" />
+
 ### Built with:
 
 	- NextJs Typescript
