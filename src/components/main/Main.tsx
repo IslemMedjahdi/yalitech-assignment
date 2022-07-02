@@ -10,7 +10,7 @@ type Props = {
 
 export default function Main({ orders, loading }: Props) {
   return (
-    <div className="mt-10 h-[60vh]  overflow-auto scrollbar-hide">
+    <div className="mt-10 flex-1 overflow-auto scrollbar-hide">
       {/*  */}
       <table className="table w-full table-fixed border-separate border-spacing-y-2">
         <TableHead />

@@ -63,7 +63,7 @@ const Home: NextPage = () => {
     getOrders(pageSize, selectedPage, selectedStatus, searchBy, searchValue);
   }, [pageSize, selectedStatus, selectedPage]);
   return (
-    <div className="h-screen px-4 py-10 font-main">
+    <div className="flex h-screen flex-col  px-4 py-10 font-main">
       <Head>
         <title>Call center</title>
       </Head>

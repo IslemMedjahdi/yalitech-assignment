@@ -30,7 +30,7 @@ export default function Pagination({
   }, [selectedPage, pages]);
 
   return (
-    <div className="flex items-center justify-center space-x-2 py-10">
+    <div className="flex items-center justify-center space-x-2 pt-4">
       <button
         onClick={() =>
           setSelectedPage(selectedPage > 1 ? selectedPage - 1 : selectedPage)

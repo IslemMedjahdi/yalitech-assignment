@@ -35,7 +35,7 @@ export default React.memo(function Cards({
     getStatus();
   }, []);
   return (
-    <div className="flex items-center space-x-2 px-2 py-10">
+    <div className="flex items-center space-x-2 px-2 py-6">
       {Object.entries(Status).map((state, index) => (
         <Card
           key={index}
