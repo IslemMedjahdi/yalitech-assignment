@@ -28,7 +28,8 @@ const Home: NextPage = () => {
   });
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    getOrders(pageSize, selectedPage, selectedStatus, searchBy, searchValue);
+    setSelectedPage(1);
+    getOrders(pageSize, 1, selectedStatus, searchBy, searchValue);
   };
   const clearHandler = () => {
     setSearchValue("");
